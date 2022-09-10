@@ -1,38 +1,258 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  background: #060822;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-div {
+  /* min-height: 100vh; */
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.child-div {
+  text-align: center;
+  /* margin-top: 5rem; */
+  border: 0.1rem solid #ccc;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+ 
+ 
+
+
+.child-div h4{
+  color: #fff;
+  font-size: 2.2rem;
+  padding-top: 2rem;
+  text-transform: capitalize;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+input {
+  /* display: block; */
+  min-width: 40rem;
+  height: 3.4rem;
+  padding: 2rem 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.42857143;
+  margin-top: 2rem;
+  color: rgb(58, 57, 57);
+  background-color: #fff;
+  background-image: none;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: inset 0 0.1rem 0.1rem rgb(0 0 0 / 8%);
+  box-shadow: inset 0 0.1rem 0.1rem rgb(0 0 0 / 8%);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input,
+input:focus,
+input:active,
+input:active:focus {
+  border: none;
+  padding: 2.3rem 1.5rem;
+  outline: none;
+}
+input {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+input:focus {
+  -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+
+.todo-btn {
+ 
+  /* justify-content: space-around; */
+  justify-content: right;
+  background: rgb(220, 41, 202);
+}
+
+.fa {
+  /* margin-left: -4.5rem; */
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  background-color: #fff;
+  background-image: none;
+  color: rgb(15, 15, 15);
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2.5rem;
+}
+.fa:hover {
+  color: rgb(47, 214, 122);
+}
+
+.fa-plus:before {
+  content: "\f067";
+  font-size: 1.5rem;
+}
+
+.showItems {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.eachItem {
+  /* background: #fff; */
+  padding: 1.2rem 0 ;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  min-width: 40rem;
+  word-break: break-word;
+  background: rgb(220, 41, 202);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eachkander{
+  
+  display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100px;
+    background: rgb(220, 41, 202);
+
+}
+
+
+.eachItem:hover {
+  background: rgb(249, 249, 252);
+  color: rgb(220, 41, 202);
+  min-width: 41rem;
+}
+
+.showItems .eachItem h3 {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  color: rgb(248, 246, 246);
+  font-weight: 700;
+}
+
+.fa-circle-xmark,
+.fa-circle-check,
+.fa-edit {
+  /* margin-left: -2.5rem; */
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  background-color: transparent;
+  /* color: rgb(251, 251, 251); */
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2.5rem;
+}
+
+.addItems {
+  color: rgb(47, 214, 122);
+}
+
+/* .fa-edit {
+  margin-left: -3.5rem;
+} */
+
+
+ .fa-circle-xmark:hover {
+  color: rgb(214, 47, 61);
+  font-size: 2.7rem;
+}
+.fa-circle-check:hover {
+  color: rgb(10, 234, 44);
+  font-size: 2.7rem;
+}
+
+.fa-edit:hover {
+  color: rgb(115, 9, 244);
+  font-size: 2.7rem;
+}
+
+.eachItem:hover h3 {
+  color: rgb(85, 41, 220);
+}
+
+.btn {
+  color: #fff;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 1000;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  text-decoration: none;
+  color: aqua;
+}
+/* for strikeover through */
+.done{
+  text-decoration: line-through;
+  cursor: not-allowed;
+
+}
+
+.button-complete,
+.button-edit,
+.button-delete{
+  border:none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  font-size: 28px;
+  border-radius: 50%;
+}
+.button-complete{
+  color:#ff6c6c;
+  margin-right: 6px;
+
+}
+.button-edit{
+  color: #e2d029;
+  margin-right: 10px;
+
+}
+.button-delete{
+  color: lightseagreen;
+}
+.complete{
+  text-decoration-style: solid;
+  text-decoration-line: line-through;
+  opacity: 0.6;
+  text-decoration-color: #ff6c6c;
+}
+/* todo strike */
+.strike{
+  text-decoration: line-through;
+  
 }
